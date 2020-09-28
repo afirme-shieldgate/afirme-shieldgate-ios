@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  PaymentSDK
+
+  Created by Gustavo Sotelo on 05/09/17.
+  Copyright © 2017 Payment. All rights reserved.
+*/
+"Name of Cardholder" = "Nome do Titular do cartão";
+
+"Card Number" = "Número do cartão";
+
+"Expiration (MM/YY)" = "Data de validade (MM/AA)";
+
+"Invalid" = "Inválido";
+
+"Invalid Date" = "Data Inválida";
+
+"Invalid CardNumber" = "Número do cartão Inválido";
+
+"Add Card" = "Adicionar o Cartão";
+
+"NIP" = "NIP";
+
+"Continue without code" = "Continue without code";
+
+"Continue with NIP" = "Continue with NIP";
+
+"Document Identifier" = "Document Identifier";
+
+"Ok" = "Ok";
+
+"Card cannot be added" = "Card cannot be added";

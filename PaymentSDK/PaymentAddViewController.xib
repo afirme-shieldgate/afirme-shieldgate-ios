@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentAddViewController" customModule="PaymentSDK" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="fJP-Xe-8ch" id="UIq-N6-aJc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="h9a-U2-B9n" id="SFl-ob-cFe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9a-U2-B9n">
+                    <rect key="frame" x="0.0" y="29" width="414" height="867"/>
+                    <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="kG5-tM-kIl"/>
+                    </connections>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTg-xN-6ra">
+                    <rect key="frame" x="0.0" y="847" width="414" height="49"/>
+                    <items>
+                        <barButtonItem title="Close" id="P4G-5n-rQ9">
+                            <color key="tintColor" red="0.3411764706" green="0.71764705880000002" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="closeAction:" destination="-1" id="Grk-xq-zZA"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fJP-Xe-8ch">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                    <color key="color" red="0.3411764706" green="0.71764705880000002" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="h9a-U2-B9n" secondAttribute="bottom" id="APb-80-X48"/>
+                <constraint firstAttribute="bottom" secondItem="YTg-xN-6ra" secondAttribute="bottom" id="BLl-bQ-zMC"/>
+                <constraint firstItem="YTg-xN-6ra" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="btQ-LR-YeQ"/>
+                <constraint firstAttribute="trailing" secondItem="h9a-U2-B9n" secondAttribute="trailing" id="ec4-ck-icD"/>
+                <constraint firstItem="h9a-U2-B9n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iCM-kM-WV5"/>
+                <constraint firstAttribute="trailing" secondItem="YTg-xN-6ra" secondAttribute="trailing" id="iE0-eH-QT9"/>
+                <constraint firstItem="fJP-Xe-8ch" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="r7k-SA-wXK"/>
+                <constraint firstItem="h9a-U2-B9n" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="29" id="xa9-yJ-195"/>
+                <constraint firstItem="fJP-Xe-8ch" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yZB-op-5Gh"/>
+            </constraints>
+            <point key="canvasLocation" x="378.26086956521743" y="286.60714285714283"/>
+        </view>
+    </objects>
+</document>

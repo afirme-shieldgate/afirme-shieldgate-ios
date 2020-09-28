@@ -1,0 +1,797 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		407B445C1CE5008000CC9C12 /* PaymentSDKFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 407B445F1CE5008000CC9C12 /* Build configuration list for PBXAggregateTarget "PaymentSDKFramework" */;
+			buildPhases = (
+				407B44621CE500DE00CC9C12 /* ShellScript */,
+			);
+			dependencies = (
+				407B44611CE500A400CC9C12 /* PBXTargetDependency */,
+			);
+			name = PaymentSDKFramework;
+			productName = PaymentezSDKFramework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		402544CB1CE3E06A00F35B23 /* PaymentAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402544C91CE3E06A00F35B23 /* PaymentAddViewController.swift */; };
+		402544CC1CE3E06A00F35B23 /* PaymentAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 402544CA1CE3E06A00F35B23 /* PaymentAddViewController.xib */; };
+		408C1B941CE1A78100B9A2F0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408C1B8D1CE1A78100B9A2F0 /* Accelerate.framework */; };
+		408C1B951CE1A78100B9A2F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408C1B8E1CE1A78100B9A2F0 /* CoreGraphics.framework */; };
+		408C1B961CE1A78100B9A2F0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408C1B8F1CE1A78100B9A2F0 /* CoreMedia.framework */; };
+		408C1B971CE1A78100B9A2F0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408C1B901CE1A78100B9A2F0 /* CoreVideo.framework */; };
+		408C1B981CE1A78100B9A2F0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408C1B911CE1A78100B9A2F0 /* MobileCoreServices.framework */; };
+		408C1B991CE1A78100B9A2F0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408C1B921CE1A78100B9A2F0 /* OpenGLES.framework */; };
+		408C1B9A1CE1A78100B9A2F0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408C1B931CE1A78100B9A2F0 /* QuartzCore.framework */; };
+		4091591C1CE1A09100FE316B /* PaymentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409159021CE1A09100FE316B /* PaymentCard.swift */; };
+		4091591D1CE1A09100FE316B /* PaymentCardScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409159031CE1A09100FE316B /* PaymentCardScan.swift */; };
+		4091591E1CE1A09100FE316B /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409159041CE1A09100FE316B /* PaymentRequest.swift */; };
+		4091591F1CE1A09100FE316B /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409159051CE1A09100FE316B /* PaymentResponse.swift */; };
+		409159201CE1A09100FE316B /* PaymentSDK-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 409159061CE1A09100FE316B /* PaymentSDK-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		409159221CE1A09100FE316B /* PaymentSDKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409159081CE1A09100FE316B /* PaymentSDKClient.swift */; };
+		409159231CE1A09100FE316B /* PaymentSecure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409159091CE1A09100FE316B /* PaymentSecure.swift */; };
+		409159241CE1A09100FE316B /* CardIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 4091590B1CE1A09100FE316B /* CardIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		409159251CE1A09100FE316B /* CardIOCreditCardInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4091590C1CE1A09100FE316B /* CardIOCreditCardInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		409159261CE1A09100FE316B /* CardIODetectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4091590D1CE1A09100FE316B /* CardIODetectionMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		409159271CE1A09100FE316B /* CardIOPaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4091590E1CE1A09100FE316B /* CardIOPaymentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		409159281CE1A09100FE316B /* CardIOPaymentViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4091590F1CE1A09100FE316B /* CardIOPaymentViewControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		409159291CE1A09100FE316B /* CardIOUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 409159101CE1A09100FE316B /* CardIOUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4091592A1CE1A09100FE316B /* CardIOView.h in Headers */ = {isa = PBXBuildFile; fileRef = 409159111CE1A09100FE316B /* CardIOView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4091592B1CE1A09100FE316B /* CardIOViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 409159121CE1A09100FE316B /* CardIOViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4091592C1CE1A09100FE316B /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 409159131CE1A09100FE316B /* libCardIO.a */; };
+		4091592D1CE1A09100FE316B /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 409159141CE1A09100FE316B /* libopencv_core.a */; };
+		4091592E1CE1A09100FE316B /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 409159151CE1A09100FE316B /* libopencv_imgproc.a */; };
+		409159321CE1A57500FE316B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409159311CE1A57500FE316B /* Security.framework */; };
+		409159341CE1A58000FE316B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409159331CE1A58000FE316B /* UIKit.framework */; };
+		409159361CE1A58900FE316B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409159351CE1A58900FE316B /* SystemConfiguration.framework */; };
+		409159381CE1A59100FE316B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409159371CE1A59100FE316B /* CoreLocation.framework */; };
+		4091593C1CE1A6A300FE316B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409159391CE1A6A300FE316B /* AudioToolbox.framework */; };
+		4091593E1CE1A6A300FE316B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4091593B1CE1A6A300FE316B /* AVFoundation.framework */; };
+		650EB6D31F5F3E510041EB81 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650EB6D21F5F3E510041EB81 /* Extension.swift */; };
+		652927951F587136004A7D4C /* PaymentAddNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652927931F587136004A7D4C /* PaymentAddNativeViewController.swift */; };
+		652927961F587136004A7D4C /* PaymentAddNativeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652927941F587136004A7D4C /* PaymentAddNativeViewController.xib */; };
+		6529279B1F58B045004A7D4C /* PaymentAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6529279A1F58B045004A7D4C /* PaymentAssets.xcassets */; };
+		655DA8101F74D66700099869 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 655DA80E1F74D66700099869 /* Localizable.strings */; };
+		658A2DC31FE8325F00B154E6 /* install_dynamic.sh in Resources */ = {isa = PBXBuildFile; fileRef = 658A2DC21FE8325E00B154E6 /* install_dynamic.sh */; };
+		65AF51CA1F5DDECC00E7B4CB /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF51C71F5DDECC00E7B4CB /* SkyFloatingLabelTextField.swift */; };
+		65AF51CB1F5DDECC00E7B4CB /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF51C81F5DDECC00E7B4CB /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		65AF51CC1F5DDECC00E7B4CB /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF51C91F5DDECC00E7B4CB /* UITextField+fixCaretPosition.swift */; };
+		65DA34EB1FCF775C005FA69C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34E61FCF775C005FA69C /* String.swift */; };
+		65DA34EC1FCF775C005FA69C /* Compiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34E71FCF775C005FA69C /* Compiler.swift */; };
+		65DA34ED1FCF775C005FA69C /* NSCharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34E81FCF775C005FA69C /* NSCharacterSet.swift */; };
+		65DA34EE1FCF775C005FA69C /* CaretStringIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34E91FCF775C005FA69C /* CaretStringIterator.swift */; };
+		65DA34EF1FCF775C005FA69C /* FormatSanitizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34EA1FCF775C005FA69C /* FormatSanitizer.swift */; };
+		65DA34FC1FCF777A005FA69C /* FixedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34F01FCF7779005FA69C /* FixedState.swift */; };
+		65DA34FD1FCF777A005FA69C /* InterfaceBuilderSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34F11FCF7779005FA69C /* InterfaceBuilderSupport.swift */; };
+		65DA34FE1FCF777A005FA69C /* MaskedTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34F21FCF7779005FA69C /* MaskedTextFieldDelegate.swift */; };
+		65DA34FF1FCF777A005FA69C /* CaretString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34F31FCF7779005FA69C /* CaretString.swift */; };
+		65DA35001FCF777A005FA69C /* FreeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34F41FCF7779005FA69C /* FreeState.swift */; };
+		65DA35011FCF777A005FA69C /* EOLState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34F51FCF7779005FA69C /* EOLState.swift */; };
+		65DA35021FCF777A005FA69C /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34F61FCF7779005FA69C /* Mask.swift */; };
+		65DA35031FCF777A005FA69C /* PolyMaskTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34F71FCF7779005FA69C /* PolyMaskTextFieldDelegate.swift */; };
+		65DA35041FCF777A005FA69C /* Next.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34F81FCF777A005FA69C /* Next.swift */; };
+		65DA35051FCF777A005FA69C /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34F91FCF777A005FA69C /* State.swift */; };
+		65DA35061FCF777A005FA69C /* ValueState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34FA1FCF777A005FA69C /* ValueState.swift */; };
+		65DA35071FCF777A005FA69C /* OptionalValueState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA34FB1FCF777A005FA69C /* OptionalValueState.swift */; };
+		65DB7DF22142FBC2000268AF /* PaymentConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DB7DF12142FBC2000268AF /* PaymentConstants.swift */; };
+		65DDE2A41F72F66A005C0FF9 /* KDataCollector.h in Headers */ = {isa = PBXBuildFile; fileRef = 65DDE2A21F72F66A005C0FF9 /* KDataCollector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65DDE2A51F72F66A005C0FF9 /* libKountDataCollector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DDE2A31F72F66A005C0FF9 /* libKountDataCollector.a */; };
+		65EABEF41F6B8C370062DD31 /* PaymentSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 409159071CE1A09100FE316B /* PaymentSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		407B44601CE500A400CC9C12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 409158D61CE1A01000FE316B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 409158DE1CE1A01000FE316B;
+			remoteInfo = PaymentezSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		402544C91CE3E06A00F35B23 /* PaymentAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentAddViewController.swift; sourceTree = "<group>"; };
+		402544CA1CE3E06A00F35B23 /* PaymentAddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentAddViewController.xib; sourceTree = "<group>"; };
+		408C1B8D1CE1A78100B9A2F0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		408C1B8E1CE1A78100B9A2F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		408C1B8F1CE1A78100B9A2F0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		408C1B901CE1A78100B9A2F0 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		408C1B911CE1A78100B9A2F0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		408C1B921CE1A78100B9A2F0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		408C1B931CE1A78100B9A2F0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		409158DF1CE1A01000FE316B /* PaymentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PaymentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		409158E21CE1A01000FE316B /* PaymentSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentSDK.h; sourceTree = "<group>"; };
+		409158E41CE1A01000FE316B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		409159001CE1A09100FE316B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		409159021CE1A09100FE316B /* PaymentCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCard.swift; sourceTree = "<group>"; };
+		409159031CE1A09100FE316B /* PaymentCardScan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCardScan.swift; sourceTree = "<group>"; };
+		409159041CE1A09100FE316B /* PaymentRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentRequest.swift; sourceTree = "<group>"; };
+		409159051CE1A09100FE316B /* PaymentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
+		409159061CE1A09100FE316B /* PaymentSDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PaymentSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		409159071CE1A09100FE316B /* PaymentSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentSDK.h; sourceTree = "<group>"; };
+		409159081CE1A09100FE316B /* PaymentSDKClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentSDKClient.swift; sourceTree = "<group>"; };
+		409159091CE1A09100FE316B /* PaymentSecure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentSecure.swift; sourceTree = "<group>"; };
+		4091590B1CE1A09100FE316B /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
+		4091590C1CE1A09100FE316B /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
+		4091590D1CE1A09100FE316B /* CardIODetectionMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIODetectionMode.h; sourceTree = "<group>"; };
+		4091590E1CE1A09100FE316B /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewController.h; sourceTree = "<group>"; };
+		4091590F1CE1A09100FE316B /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
+		409159101CE1A09100FE316B /* CardIOUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOUtilities.h; sourceTree = "<group>"; };
+		409159111CE1A09100FE316B /* CardIOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOView.h; sourceTree = "<group>"; };
+		409159121CE1A09100FE316B /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
+		409159131CE1A09100FE316B /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
+		409159141CE1A09100FE316B /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_core.a; sourceTree = "<group>"; };
+		409159151CE1A09100FE316B /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_imgproc.a; sourceTree = "<group>"; };
+		409159311CE1A57500FE316B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		409159331CE1A58000FE316B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		409159351CE1A58900FE316B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		409159371CE1A59100FE316B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		409159391CE1A6A300FE316B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4091593A1CE1A6A300FE316B /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		4091593B1CE1A6A300FE316B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		650EB6D21F5F3E510041EB81 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		652927931F587136004A7D4C /* PaymentAddNativeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentAddNativeViewController.swift; sourceTree = "<group>"; };
+		652927941F587136004A7D4C /* PaymentAddNativeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentAddNativeViewController.xib; sourceTree = "<group>"; };
+		6529279A1F58B045004A7D4C /* PaymentAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PaymentAssets.xcassets; sourceTree = "<group>"; };
+		655DA80F1F74D66700099869 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		655DA8111F74D67200099869 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		655DA8121F74D73D00099869 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		655DA8131F74D74A00099869 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		655DA8141F74D74F00099869 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		655DA8151F74D85A00099869 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		658A2DC21FE8325E00B154E6 /* install_dynamic.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install_dynamic.sh; sourceTree = "<group>"; };
+		65AF51C71F5DDECC00E7B4CB /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		65AF51C81F5DDECC00E7B4CB /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		65AF51C91F5DDECC00E7B4CB /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		65DA34E61FCF775C005FA69C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = lib/InputMask/Helper/String.swift; sourceTree = "<group>"; };
+		65DA34E71FCF775C005FA69C /* Compiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Compiler.swift; path = lib/InputMask/Helper/Compiler.swift; sourceTree = "<group>"; };
+		65DA34E81FCF775C005FA69C /* NSCharacterSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSCharacterSet.swift; path = lib/InputMask/Helper/NSCharacterSet.swift; sourceTree = "<group>"; };
+		65DA34E91FCF775C005FA69C /* CaretStringIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaretStringIterator.swift; path = lib/InputMask/Helper/CaretStringIterator.swift; sourceTree = "<group>"; };
+		65DA34EA1FCF775C005FA69C /* FormatSanitizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormatSanitizer.swift; path = lib/InputMask/Helper/FormatSanitizer.swift; sourceTree = "<group>"; };
+		65DA34F01FCF7779005FA69C /* FixedState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FixedState.swift; path = lib/InputMask/Model/State/FixedState.swift; sourceTree = "<group>"; };
+		65DA34F11FCF7779005FA69C /* InterfaceBuilderSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InterfaceBuilderSupport.swift; path = lib/InputMask/View/InterfaceBuilderSupport.swift; sourceTree = "<group>"; };
+		65DA34F21FCF7779005FA69C /* MaskedTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaskedTextFieldDelegate.swift; path = lib/InputMask/View/MaskedTextFieldDelegate.swift; sourceTree = "<group>"; };
+		65DA34F31FCF7779005FA69C /* CaretString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaretString.swift; path = lib/InputMask/Model/CaretString.swift; sourceTree = "<group>"; };
+		65DA34F41FCF7779005FA69C /* FreeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreeState.swift; path = lib/InputMask/Model/State/FreeState.swift; sourceTree = "<group>"; };
+		65DA34F51FCF7779005FA69C /* EOLState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EOLState.swift; path = lib/InputMask/Model/State/EOLState.swift; sourceTree = "<group>"; };
+		65DA34F61FCF7779005FA69C /* Mask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mask.swift; path = lib/InputMask/Mask.swift; sourceTree = "<group>"; };
+		65DA34F71FCF7779005FA69C /* PolyMaskTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PolyMaskTextFieldDelegate.swift; path = lib/InputMask/View/PolyMaskTextFieldDelegate.swift; sourceTree = "<group>"; };
+		65DA34F81FCF777A005FA69C /* Next.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Next.swift; path = lib/InputMask/Model/Next.swift; sourceTree = "<group>"; };
+		65DA34F91FCF777A005FA69C /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = State.swift; path = lib/InputMask/Model/State.swift; sourceTree = "<group>"; };
+		65DA34FA1FCF777A005FA69C /* ValueState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValueState.swift; path = lib/InputMask/Model/State/ValueState.swift; sourceTree = "<group>"; };
+		65DA34FB1FCF777A005FA69C /* OptionalValueState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionalValueState.swift; path = lib/InputMask/Model/State/OptionalValueState.swift; sourceTree = "<group>"; };
+		65DB7DF12142FBC2000268AF /* PaymentConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConstants.swift; sourceTree = "<group>"; };
+		65DDE2A21F72F66A005C0FF9 /* KDataCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDataCollector.h; sourceTree = "<group>"; };
+		65DDE2A31F72F66A005C0FF9 /* libKountDataCollector.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libKountDataCollector.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		409158DB1CE1A01000FE316B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408C1B941CE1A78100B9A2F0 /* Accelerate.framework in Frameworks */,
+				408C1B951CE1A78100B9A2F0 /* CoreGraphics.framework in Frameworks */,
+				408C1B961CE1A78100B9A2F0 /* CoreMedia.framework in Frameworks */,
+				408C1B971CE1A78100B9A2F0 /* CoreVideo.framework in Frameworks */,
+				408C1B981CE1A78100B9A2F0 /* MobileCoreServices.framework in Frameworks */,
+				408C1B991CE1A78100B9A2F0 /* OpenGLES.framework in Frameworks */,
+				408C1B9A1CE1A78100B9A2F0 /* QuartzCore.framework in Frameworks */,
+				409159321CE1A57500FE316B /* Security.framework in Frameworks */,
+				4091593C1CE1A6A300FE316B /* AudioToolbox.framework in Frameworks */,
+				4091593E1CE1A6A300FE316B /* AVFoundation.framework in Frameworks */,
+				409159381CE1A59100FE316B /* CoreLocation.framework in Frameworks */,
+				409159361CE1A58900FE316B /* SystemConfiguration.framework in Frameworks */,
+				409159341CE1A58000FE316B /* UIKit.framework in Frameworks */,
+				4091592D1CE1A09100FE316B /* libopencv_core.a in Frameworks */,
+				4091592C1CE1A09100FE316B /* libCardIO.a in Frameworks */,
+				65DDE2A51F72F66A005C0FF9 /* libKountDataCollector.a in Frameworks */,
+				4091592E1CE1A09100FE316B /* libopencv_imgproc.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		409158D51CE1A01000FE316B = {
+			isa = PBXGroup;
+			children = (
+				408C1B8D1CE1A78100B9A2F0 /* Accelerate.framework */,
+				408C1B8E1CE1A78100B9A2F0 /* CoreGraphics.framework */,
+				408C1B8F1CE1A78100B9A2F0 /* CoreMedia.framework */,
+				408C1B901CE1A78100B9A2F0 /* CoreVideo.framework */,
+				408C1B911CE1A78100B9A2F0 /* MobileCoreServices.framework */,
+				408C1B921CE1A78100B9A2F0 /* OpenGLES.framework */,
+				408C1B931CE1A78100B9A2F0 /* QuartzCore.framework */,
+				409159391CE1A6A300FE316B /* AudioToolbox.framework */,
+				4091593A1CE1A6A300FE316B /* AudioUnit.framework */,
+				4091593B1CE1A6A300FE316B /* AVFoundation.framework */,
+				409159371CE1A59100FE316B /* CoreLocation.framework */,
+				409159351CE1A58900FE316B /* SystemConfiguration.framework */,
+				409159331CE1A58000FE316B /* UIKit.framework */,
+				409159311CE1A57500FE316B /* Security.framework */,
+				409158FA1CE1A09000FE316B /* PaymentSDK */,
+				4091590A1CE1A09100FE316B /* CardIO */,
+				409158E01CE1A01000FE316B /* Products */,
+				6529279F1F58D0A9004A7D4C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		409158E01CE1A01000FE316B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				409158DF1CE1A01000FE316B /* PaymentSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		409158FA1CE1A09000FE316B /* PaymentSDK */ = {
+			isa = PBXGroup;
+			children = (
+				658A2DC21FE8325E00B154E6 /* install_dynamic.sh */,
+				65DA34E51FCF7748005FA69C /* InputMask */,
+				65AF51CF1F5F246200E7B4CB /* lang */,
+				65AF51C61F5DDEB800E7B4CB /* FloatTextField */,
+				652927971F58AFEE004A7D4C /* Asset */,
+				409158FB1CE1A09000FE316B /* DeviceCollectorLibrary */,
+				409159001CE1A09100FE316B /* Info.plist */,
+				409159021CE1A09100FE316B /* PaymentCard.swift */,
+				65DB7DF12142FBC2000268AF /* PaymentConstants.swift */,
+				409159031CE1A09100FE316B /* PaymentCardScan.swift */,
+				409159041CE1A09100FE316B /* PaymentRequest.swift */,
+				409159051CE1A09100FE316B /* PaymentResponse.swift */,
+				409159061CE1A09100FE316B /* PaymentSDK-Bridging-Header.h */,
+				409159071CE1A09100FE316B /* PaymentSDK.h */,
+				409159081CE1A09100FE316B /* PaymentSDKClient.swift */,
+				409159091CE1A09100FE316B /* PaymentSecure.swift */,
+				409158E21CE1A01000FE316B /* PaymentSDK.h */,
+				409158E41CE1A01000FE316B /* Info.plist */,
+				402544C91CE3E06A00F35B23 /* PaymentAddViewController.swift */,
+				402544CA1CE3E06A00F35B23 /* PaymentAddViewController.xib */,
+				652927931F587136004A7D4C /* PaymentAddNativeViewController.swift */,
+				652927941F587136004A7D4C /* PaymentAddNativeViewController.xib */,
+			);
+			path = PaymentSDK;
+			sourceTree = "<group>";
+		};
+		409158FB1CE1A09000FE316B /* DeviceCollectorLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				65DDE2A21F72F66A005C0FF9 /* KDataCollector.h */,
+				65DDE2A31F72F66A005C0FF9 /* libKountDataCollector.a */,
+			);
+			path = DeviceCollectorLibrary;
+			sourceTree = "<group>";
+		};
+		4091590A1CE1A09100FE316B /* CardIO */ = {
+			isa = PBXGroup;
+			children = (
+				4091590B1CE1A09100FE316B /* CardIO.h */,
+				4091590C1CE1A09100FE316B /* CardIOCreditCardInfo.h */,
+				4091590D1CE1A09100FE316B /* CardIODetectionMode.h */,
+				4091590E1CE1A09100FE316B /* CardIOPaymentViewController.h */,
+				4091590F1CE1A09100FE316B /* CardIOPaymentViewControllerDelegate.h */,
+				409159101CE1A09100FE316B /* CardIOUtilities.h */,
+				409159111CE1A09100FE316B /* CardIOView.h */,
+				409159121CE1A09100FE316B /* CardIOViewDelegate.h */,
+				409159131CE1A09100FE316B /* libCardIO.a */,
+				409159141CE1A09100FE316B /* libopencv_core.a */,
+				409159151CE1A09100FE316B /* libopencv_imgproc.a */,
+			);
+			path = CardIO;
+			sourceTree = "<group>";
+		};
+		652927971F58AFEE004A7D4C /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				6529279A1F58B045004A7D4C /* PaymentAssets.xcassets */,
+			);
+			name = Asset;
+			sourceTree = "<group>";
+		};
+		6529279F1F58D0A9004A7D4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65AF51C61F5DDEB800E7B4CB /* FloatTextField */ = {
+			isa = PBXGroup;
+			children = (
+				65AF51C71F5DDECC00E7B4CB /* SkyFloatingLabelTextField.swift */,
+				65AF51C81F5DDECC00E7B4CB /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				65AF51C91F5DDECC00E7B4CB /* UITextField+fixCaretPosition.swift */,
+			);
+			name = FloatTextField;
+			sourceTree = "<group>";
+		};
+		65AF51CF1F5F246200E7B4CB /* lang */ = {
+			isa = PBXGroup;
+			children = (
+				655DA80E1F74D66700099869 /* Localizable.strings */,
+				650EB6D21F5F3E510041EB81 /* Extension.swift */,
+			);
+			name = lang;
+			sourceTree = "<group>";
+		};
+		65DA34E51FCF7748005FA69C /* InputMask */ = {
+			isa = PBXGroup;
+			children = (
+				65DA34F31FCF7779005FA69C /* CaretString.swift */,
+				65DA34F51FCF7779005FA69C /* EOLState.swift */,
+				65DA34F01FCF7779005FA69C /* FixedState.swift */,
+				65DA34F41FCF7779005FA69C /* FreeState.swift */,
+				65DA34F11FCF7779005FA69C /* InterfaceBuilderSupport.swift */,
+				65DA34F61FCF7779005FA69C /* Mask.swift */,
+				65DA34F21FCF7779005FA69C /* MaskedTextFieldDelegate.swift */,
+				65DA34F81FCF777A005FA69C /* Next.swift */,
+				65DA34FB1FCF777A005FA69C /* OptionalValueState.swift */,
+				65DA34F71FCF7779005FA69C /* PolyMaskTextFieldDelegate.swift */,
+				65DA34F91FCF777A005FA69C /* State.swift */,
+				65DA34FA1FCF777A005FA69C /* ValueState.swift */,
+				65DA34E91FCF775C005FA69C /* CaretStringIterator.swift */,
+				65DA34E71FCF775C005FA69C /* Compiler.swift */,
+				65DA34EA1FCF775C005FA69C /* FormatSanitizer.swift */,
+				65DA34E81FCF775C005FA69C /* NSCharacterSet.swift */,
+				65DA34E61FCF775C005FA69C /* String.swift */,
+			);
+			name = InputMask;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		409158DC1CE1A01000FE316B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409159271CE1A09100FE316B /* CardIOPaymentViewController.h in Headers */,
+				409159241CE1A09100FE316B /* CardIO.h in Headers */,
+				409159261CE1A09100FE316B /* CardIODetectionMode.h in Headers */,
+				409159281CE1A09100FE316B /* CardIOPaymentViewControllerDelegate.h in Headers */,
+				4091592B1CE1A09100FE316B /* CardIOViewDelegate.h in Headers */,
+				409159291CE1A09100FE316B /* CardIOUtilities.h in Headers */,
+				4091592A1CE1A09100FE316B /* CardIOView.h in Headers */,
+				409159201CE1A09100FE316B /* PaymentSDK-Bridging-Header.h in Headers */,
+				65DDE2A41F72F66A005C0FF9 /* KDataCollector.h in Headers */,
+				65EABEF41F6B8C370062DD31 /* PaymentSDK.h in Headers */,
+				409159251CE1A09100FE316B /* CardIOCreditCardInfo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		409158DE1CE1A01000FE316B /* PaymentSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 409158E71CE1A01000FE316B /* Build configuration list for PBXNativeTarget "PaymentSDK" */;
+			buildPhases = (
+				409158DA1CE1A01000FE316B /* Sources */,
+				409158DB1CE1A01000FE316B /* Frameworks */,
+				409158DC1CE1A01000FE316B /* Headers */,
+				409158DD1CE1A01000FE316B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PaymentSDK;
+			productName = PaymentezSDK;
+			productReference = 409158DF1CE1A01000FE316B /* PaymentSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		409158D61CE1A01000FE316B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Paymentez;
+				TargetAttributes = {
+					407B445C1CE5008000CC9C12 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					409158DE1CE1A01000FE316B = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = QBSGESLSWZ;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 409158D91CE1A01000FE316B /* Build configuration list for PBXProject "PaymentSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				en,
+				Base,
+				es,
+				"pt-BR",
+				"es-419",
+				"es-MX",
+			);
+			mainGroup = 409158D51CE1A01000FE316B;
+			productRefGroup = 409158E01CE1A01000FE316B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				409158DE1CE1A01000FE316B /* PaymentSDK */,
+				407B445C1CE5008000CC9C12 /* PaymentSDKFramework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		409158DD1CE1A01000FE316B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658A2DC31FE8325F00B154E6 /* install_dynamic.sh in Resources */,
+				402544CC1CE3E06A00F35B23 /* PaymentAddViewController.xib in Resources */,
+				655DA8101F74D66700099869 /* Localizable.strings in Resources */,
+				6529279B1F58B045004A7D4C /* PaymentAssets.xcassets in Resources */,
+				652927961F587136004A7D4C /* PaymentAddNativeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		407B44621CE500DE00CC9C12 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      if [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\n                                                                      cp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      ######################\n                                                                      # On Release, copy the result to release directory\n                                                                      ######################\n                                                                      OUTPUT_DIR=\"${PROJECT_DIR}/Output/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n                                                                      \n                                                                      rm -rf \"$OUTPUT_DIR\"\n                                                                      mkdir -p \"$OUTPUT_DIR\"\n                                                                      \n                                                                      cp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n                                                                      \n                                                                      if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n                                                                      open \"${OUTPUT_DIR}/\"\n                                                                      fi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		409158DA1CE1A01000FE316B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409159231CE1A09100FE316B /* PaymentSecure.swift in Sources */,
+				65DA34FE1FCF777A005FA69C /* MaskedTextFieldDelegate.swift in Sources */,
+				65DA34EB1FCF775C005FA69C /* String.swift in Sources */,
+				65DA34EC1FCF775C005FA69C /* Compiler.swift in Sources */,
+				65DA35031FCF777A005FA69C /* PolyMaskTextFieldDelegate.swift in Sources */,
+				65DA35051FCF777A005FA69C /* State.swift in Sources */,
+				65DA34ED1FCF775C005FA69C /* NSCharacterSet.swift in Sources */,
+				65DA34EE1FCF775C005FA69C /* CaretStringIterator.swift in Sources */,
+				65AF51CB1F5DDECC00E7B4CB /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
+				65DA35001FCF777A005FA69C /* FreeState.swift in Sources */,
+				402544CB1CE3E06A00F35B23 /* PaymentAddViewController.swift in Sources */,
+				65DB7DF22142FBC2000268AF /* PaymentConstants.swift in Sources */,
+				650EB6D31F5F3E510041EB81 /* Extension.swift in Sources */,
+				4091591D1CE1A09100FE316B /* PaymentCardScan.swift in Sources */,
+				65AF51CC1F5DDECC00E7B4CB /* UITextField+fixCaretPosition.swift in Sources */,
+				409159221CE1A09100FE316B /* PaymentSDKClient.swift in Sources */,
+				65DA34FD1FCF777A005FA69C /* InterfaceBuilderSupport.swift in Sources */,
+				65DA35071FCF777A005FA69C /* OptionalValueState.swift in Sources */,
+				4091591C1CE1A09100FE316B /* PaymentCard.swift in Sources */,
+				65DA35041FCF777A005FA69C /* Next.swift in Sources */,
+				652927951F587136004A7D4C /* PaymentAddNativeViewController.swift in Sources */,
+				65AF51CA1F5DDECC00E7B4CB /* SkyFloatingLabelTextField.swift in Sources */,
+				65DA35021FCF777A005FA69C /* Mask.swift in Sources */,
+				4091591F1CE1A09100FE316B /* PaymentResponse.swift in Sources */,
+				65DA34EF1FCF775C005FA69C /* FormatSanitizer.swift in Sources */,
+				65DA34FC1FCF777A005FA69C /* FixedState.swift in Sources */,
+				65DA35011FCF777A005FA69C /* EOLState.swift in Sources */,
+				65DA35061FCF777A005FA69C /* ValueState.swift in Sources */,
+				4091591E1CE1A09100FE316B /* PaymentRequest.swift in Sources */,
+				65DA34FF1FCF777A005FA69C /* CaretString.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		407B44611CE500A400CC9C12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 409158DE1CE1A01000FE316B /* PaymentSDK */;
+			targetProxy = 407B44601CE500A400CC9C12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		655DA80E1F74D66700099869 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				655DA80F1F74D66700099869 /* Base */,
+				655DA8111F74D67200099869 /* en */,
+				655DA8121F74D73D00099869 /* es */,
+				655DA8131F74D74A00099869 /* pt-BR */,
+				655DA8141F74D74F00099869 /* es-419 */,
+				655DA8151F74D85A00099869 /* es-MX */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		407B445D1CE5008000CC9C12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		407B445E1CE5008000CC9C12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		409158E51CE1A01000FE316B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		409158E61CE1A01000FE316B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		409158E81CE1A01000FE316B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QBSGESLSWZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PaymentSDK/lib",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/PaymentSDK/DeviceCollectorLibrary/**";
+				INFOPLIST_FILE = PaymentSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PaymentSDK",
+					"$(PROJECT_DIR)/PaymentSDK/DeviceCollectorLibrary",
+					"$(PROJECT_DIR)/CardIO",
+				);
+				MARKETING_VERSION = 1.7;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode-marker";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.afirme.shieldgate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
+			};
+			name = Debug;
+		};
+		409158E91CE1A01000FE316B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PaymentSDK/lib",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/PaymentSDK/DeviceCollectorLibrary/**";
+				INFOPLIST_FILE = PaymentSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PaymentSDK",
+					"$(PROJECT_DIR)/PaymentSDK/DeviceCollectorLibrary",
+					"$(PROJECT_DIR)/CardIO",
+				);
+				MARKETING_VERSION = 1.7;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.afirme.shieldgate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		407B445F1CE5008000CC9C12 /* Build configuration list for PBXAggregateTarget "PaymentSDKFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				407B445D1CE5008000CC9C12 /* Debug */,
+				407B445E1CE5008000CC9C12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		409158D91CE1A01000FE316B /* Build configuration list for PBXProject "PaymentSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				409158E51CE1A01000FE316B /* Debug */,
+				409158E61CE1A01000FE316B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		409158E71CE1A01000FE316B /* Build configuration list for PBXNativeTarget "PaymentSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				409158E81CE1A01000FE316B /* Debug */,
+				409158E91CE1A01000FE316B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 409158D61CE1A01000FE316B /* Project object */;
+}

@@ -1,0 +1,9 @@
+//
+//  CommonCrypto.xcconfig
+//  PaymentSDK
+//
+//  Created by Gustavo Sotelo on 09/05/16.
+//  Copyright © 2016 Payment. All rights reserved.
+//
+MODULEMAP_FILE[sdk=iphoneos*]        = $(SRCROOT)/CommonCrypto/module.map
+MODULEMAP_FILE[sdk=iphonesimulator*] = $(SRCROOT)/CommonCrypto/module.map

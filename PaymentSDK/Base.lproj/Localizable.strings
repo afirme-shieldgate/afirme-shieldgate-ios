@@ -1,0 +1,39 @@
+/*
+ Localizable.strings
+ PaymentSDK
+ 
+ Created by Gustavo Sotelo on 05/09/17.
+ Copyright © 2017 Payment. All rights reserved.
+ */
+"Name of Cardholder" = "Card Holder's Name";
+
+"Card Number" = "Card Number";
+
+"Expiration (MM/YY)" = "Expiration (MM/YY)";
+
+"Invalid" = "Invalid";
+
+"Invalid Date" = "Invalid Date";
+
+"Invalid Card Number" = "Your card's number is invalid";
+
+"Add Card" = "Add Card";
+
+"NIP" = "NIP";
+
+"Continue without code" = "Continue without code";
+
+"Continue with NIP" = "Continue with NIP";
+
+"Document Identifier" = "Document Identifier";
+
+"Validate this operation using a temporal unique code that will be sent by SMS or E-email registered at Tuya." = "Validate this operation using a temporal unique code that will be sent by SMS or E-email registered at Tuya.";
+
+"Ok" = "Ok";
+
+"Card cannot be added" = "Card cannot be added";
+
+"Card Added" = "Card Added Succesfully";
+
+
+

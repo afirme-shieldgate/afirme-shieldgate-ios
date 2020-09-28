@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "0gG-Wj-da9"; */
+"0gG-Wj-da9.text" = "Detail";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "8oC-cs-zIO"; */
+"8oC-cs-zIO.text" = "Total";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "BY7-TN-Qj2"; */
+"BY7-TN-Qj2.text" = "Detail";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Jrv-OW-uxj"; */
+"Jrv-OW-uxj.text" = "Title";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "M6N-ff-obX"; */
+"M6N-ff-obX.text" = "Title";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "RkN-Y8-SlF"; */
+"RkN-Y8-SlF.text" = "Subtitle";
+
+/* Class = "UINavigationItem"; title = "Cuenta"; ObjectID = "cpY-9d-46N"; */
+"cpY-9d-46N.title" = "Cuenta";
+
+/* Class = "UIButton"; normalTitle = "Agregar tarjeta"; ObjectID = "czx-zU-qsf"; */
+"czx-zU-qsf.normalTitle" = "Agregar tarjeta";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "dV1-dx-Mxz"; */
+"dV1-dx-Mxz.text" = "Title";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "jHS-HL-1be"; */
+"jHS-HL-1be.text" = "Detail";
+
+/* Class = "UINavigationItem"; title = "Mis Tarjetas"; ObjectID = "smh-n0-QjS"; */
+"smh-n0-QjS.title" = "Mis Tarjetas";
+
+/* Class = "UINavigationItem"; title = "Nueva Tarjeta"; ObjectID = "vRF-dJ-wIZ"; */
+"vRF-dJ-wIZ.title" = "Nueva Tarjeta";
+
+/* Class = "UIButton"; normalTitle = "PAGAR"; ObjectID = "w2b-mF-Nu0"; */
+"w2b-mF-Nu0.normalTitle" = "PAGAR";
