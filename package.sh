@@ -13,6 +13,6 @@ xcodebuild build -project $FRAMEWORK.xcodeproj -target $FRAMEWORK -sdk iphonesim
 cp -RL $BUILD/Release-iphoneos $BUILD/Release-universal
 cp -RL $BUILD/Release-iphonesimulator/$FRAMEWORK_PATH/Modules/$FRAMEWORK.swiftmodule/* $BUILD/Release-universal/$FRAMEWORK_PATH/Modules/$FRAMEWORK.swiftmodule
                                                                                                     
-lipo -create -output $BUILD/Release-universal/$FRAMEWORK_PATH/$FRAMEWORK $BUILD/Release-iphoneos/$FRAMEWORK_PATH/$FRAMEWORK $BUILD/Release-iphonesimulator/$FRAMEWORK_PATH/$FRAMEWORK
+lipo -create -output $BUILD/Release-universal/$FRAMEWORK_PATH/$FRAMEWORK $BUILD/Release-iphoneos/$FRAMEWORK_PATH/$FRAMEWORK $BUILD/Release-iphonesimulator/$FRAMEWORK_PATH/$FRAMEWORK 
                                                                                                     
 tar -czv -C $BUILD/Release-universal -f $FRAMEWORK.tar.gz $FRAMEWORK_PATH $FRAMEWORK_PATH.dSYM
