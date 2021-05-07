@@ -20,6 +20,29 @@ import UIKit
 
 open class PaymentAddNativeViewController: UIViewController {
     
+//    open override func viewDidAppear(_ animated: Bool) {
+//        var newSafeArea = UIEdgeInsets()
+//          // Adjust the safe area to accommodate
+//          //  the width of the side view.
+//          if let sideViewWidth = sideView?.bounds.size.width {
+//             newSafeArea.right += sideViewWidth
+//          }
+//          // Adjust the safe area to accommodate
+//          //  the height of the bottom view.
+//          if let bottomViewHeight = bottomView?.bounds.size.height {
+//             newSafeArea.bottom += bottomViewHeight
+//          }
+//          // Adjust the safe area insets of the
+//          //  embedded child view controller.
+//        let child = self.children[0]
+//        if #available(iOS 11.0, *) {
+//            child.additionalSafeAreaInsets = newSafeArea
+//        } else {
+//            // Fallback on earlier versions
+//        }
+//    }
+    
+    
     open var backgroundColor:UIColor = .white {
         didSet{
             setupColor()
@@ -86,21 +109,21 @@ open class PaymentAddNativeViewController: UIViewController {
         stackView.spacing = 10
         stackView.distribution = .fill
 
-        stackView.backgroundColor = .red
+        stackView.backgroundColor = .white
         return stackView
     }()
     let nameView: UIStackView = {
         let stackView = UIStackView()
         //stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
-        stackView.backgroundColor = .red
+        stackView.backgroundColor = .white
         stackView.distribution = .fillEqually
         return stackView
     }()
     let cardNumberView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.backgroundColor = .red
+        stackView.backgroundColor = .white
         stackView.spacing = 5
         stackView.distribution = .fill
         return stackView
@@ -108,7 +131,7 @@ open class PaymentAddNativeViewController: UIViewController {
     let verificationView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.backgroundColor = .red
+        stackView.backgroundColor = .white
         stackView.spacing = 5
         stackView.distribution = .fill
         return stackView

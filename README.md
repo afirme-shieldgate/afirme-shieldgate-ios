@@ -77,31 +77,32 @@ SDK is a dynamic framework ([More Info](https://developer.apple.com/library/cont
 
 1. Build the SDK and create .framework files
 
-- If you want build yourself the SDK or you are using a new/beta version of Xcode . Download the project from github and run the following script inside the root folder
-
-```
-sh package.sh
-
-```
 This will create a /build folder where there are all the necesary .framework (simulator, iphoneos and universal)
+ 
+- With Target PaymentSDK selected, build the project for any iOS Simulator.
+- With Target PaymentSDK selected, build the project for a physical device.
 
+After
+
+- With the Target PaymentezSDK-Universal,  build the project for any iOS device. 
+- Inside the group Products -> PaymentSDK.framework -> Show in finder
+- Inside the the directory of PaymentSDK.framework, CMD+up
+- You can see three groups, inside the group Release-iosuniversal, you'll find the PaymentSDK.framework
 
 - Or if you prefer you can download pre-compilled .framework files from [Releases](https://github.com/afirme-shieldgate/afirme-shieldgate-ios)
 
 
-2. Drag the PaymentSDK.framework (preferably Universal version) To your project and check "Copy Files if needed".
+2. Drag the PaymentSDK.framework To your project and check "Copy Files if needed".
 
-In Target->General : Add PaymentSDK.framework to Embeeded Libraries and Linked Frameworks and  Libraries
+In Target->General : Add PaymentSDK.framework to Frameworks, Libraries, and Embedded Content
 
-
+In Target->Build Settings : Validate Workspace should be YES
 
 3. Update the Build Settings with
 
 Set ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 
 In Build Phases -> Embed Frameworks Uncheck "Copy Only When Installing"
-
-
 
 4. If you use the Universal version and you want to upload to the appstore. Add Run Script Phase: Target->Build Phases -> + ->New Run Script Phase. And paste the following. Make sure that this build phase is added after Embed Frameworks phase.
 ```
@@ -281,7 +282,7 @@ let card = PaymentCard.createCard(cardHolder:"Gustavo Sotelo", cardNumber:"41111
 
 if card != nil  // A valid card was created
 {
-PaymentSDKClient.add(card, uid: "69123", email: "gsotelo@shieldgate.mx", callback: { (error, cardAdded) in
+PaymentSDKClient.add(card, uid: "69123", email: "gsotelo@globalpay.com", callback: { (error, cardAdded) in
 
 if cardAdded != nil
 {
@@ -395,6 +396,6 @@ Before you can run the PaymentStore application, you need to provide it with you
 
 1. If you haven't already and APP_CODE and APP_SECRET_KEY, please ask your contact on Payment Team for it.
 2. Replace the `PAYMENT_APP_CODE` and `PAYMENT_APP_SECRET_KEY` in your AppDelegate as shown in Usage section
-3. Head to https://github.com/afirme-shieldgate/example-java-backend and click "Deploy to Heroku" (you may have to sign up for a Heroku account as part of this process). Provide your Payment Server Credentials APP_CODE and  APP_SECRET_KEY fields under 'Env'. Click "Deploy for Free".
+3.  Head to https://github.com/afirme-shieldgate/example-java-backend and click "Deploy to Heroku" (you may have to sign up for a Heroku account as part of this process). Provide your Paymentz Server Credentials APP_CODE and  APP_SECRET_KEY fields under 'Env'. Click "Deploy for Free".
 4. Replace the `BACKEND_URL` variable in the MyBackendLib.swift (inside the variable myBackendUrl) with the app URL Heroku provides you with (e.g. "https://my-example-app.herokuapp.com")
 5. Replace the variables (uid and email) in UserModel.swift  with your own user id reference
