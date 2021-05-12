@@ -282,7 +282,7 @@ let card = PaymentCard.createCard(cardHolder:"Gustavo Sotelo", cardNumber:"41111
 
 if card != nil  // A valid card was created
 {
-PaymentSDKClient.add(card, uid: "69123", email: "gsotelo@globalpay.com", callback: { (error, cardAdded) in
+PaymentSDKClient.add(card, uid: "69123", email: "test@shielgate.mx", callback: { (error, cardAdded) in
 
 if cardAdded != nil
 {
