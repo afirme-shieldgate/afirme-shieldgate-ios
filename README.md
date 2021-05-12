@@ -84,7 +84,7 @@ This will create a /build folder where there are all the necesary .framework (si
 
 After
 
-- With the Target PaymentezSDK-Universal,  build the project for any iOS device. 
+- With the Target PaymentSDK-Universal,  build the project for any iOS device. 
 - Inside the group Products -> PaymentSDK.framework -> Show in finder
 - Inside the the directory of PaymentSDK.framework, CMD+up
 - You can see three groups, inside the group Release-iosuniversal, you'll find the PaymentSDK.framework
