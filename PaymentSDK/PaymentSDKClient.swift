@@ -65,24 +65,42 @@ import CommonCrypto
                     parameters["auth_timestamp"] = authTimestamp
                     parameters["auth_token"] = authToken
                     
-                    kountHandler.collect(sessionId!) { (err) in
-                        
-                        if err == nil
-                        {
+                kountHandler.collect(sessionId!) { (err) in
+                    
+                    if err == nil
+                    {
+                        self.request.makeRequest("/api/cc/add/", parameters: parameters as NSDictionary) { (error, statusCode, responseData) in
                             
                             
-                            
-                            let url = self.request.getUrl("/api/cc/add/", parameters:parameters as NSDictionary)
-                            
-                            vc.loadUrl(url)
-                            
-                        }
-                        else
-                        {
-                            callback(PaymentSDKError.createError(err!), false, false)
+                            if error == nil
+                            {
+                                
+                                if statusCode! != 200
+                                {
+                                    let dataR = responseData as! [String:Any]
+                                    
+                                    let err = PaymentSDKError.createError(statusCode!, description: dataR["description"] as! String, help: dataR["details"] as? String, type:nil)
+                                    callback(err, false, false)
+                                    
+                                }
+                                else
+                                {
+                                    callback(nil, false,true)
+                                }
+                            }
+                            else
+                            {
+                                callback(PaymentSDKError.createError(error!), false, false)
+                            }
                             
                         }
                     }
+                    else
+                    {
+                        callback(PaymentSDKError.createError(err!), false, false)
+                        
+                    }
+                }
                     
             }
             
