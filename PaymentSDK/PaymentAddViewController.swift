@@ -44,15 +44,6 @@ class PaymentAddViewController: UIViewController, UIWebViewDelegate {
         
         // Do any additional setup after loading the view.
     }
-    
-    func loadUrl(_ urlToLoad:String)
-    {
-        self.urlToLoad = urlToLoad
-        print(urlToLoad)
-        let url:URL? = URL(string: self.urlToLoad)
-        let request = NSMutableURLRequest(url:url!)
-        webView.loadRequest(request as URLRequest)
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -67,54 +58,7 @@ class PaymentAddViewController: UIViewController, UIWebViewDelegate {
         }
     }
     
-    func webViewDidStartLoad(_ webView: UIWebView) {
-        self.activityIndicator.startAnimating()
-    }
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        self.activityIndicator.stopAnimating()
-        let urlLoaded = self.webView.request?.url?.absoluteString
-        if urlLoaded!.range(of: "save") != nil
-        {
-            let cookieJar = HTTPCookieStorage.shared
-            let cookieJarForUrl = (cookieJar.cookies(for: URL(string: urlLoaded!)!))
-            for cookie in cookieJarForUrl!
-            {
-                print(cookie.name)
-                print(cookie.value)
-                if cookie.name == "pmntz_error_message"
-                {
-                    
-                    var error:PaymentSDKError
-                    
-                    if (cookie.value.range(of: "verify") != nil)
-                    {
-                        error = PaymentSDKError.createError(3, description: cookie.value, help: "System Error", type:nil)
-                    }
-                    else
-                    {
-                        error = PaymentSDKError.createError(3, description: cookie.value, help: "", type:nil)
-                    }
-                    
-                    
-                    self.dismiss(animated: true) {
-                        self.callback!(error, false, false)
-                    }
-                    
-                }
-                else if cookie.name == "pmntz_add_success"
-                {
-                    
-                    if cookie.value == "success" || cookie.value == "true"
-                    {
-                        self.dismiss(animated: true) {
-                            self.callback!(nil, false, true)
-                        }
-                    }
-                }
-            }
-        }
-    }
-   
+    
     /*
     // MARK: - Navigation
 
