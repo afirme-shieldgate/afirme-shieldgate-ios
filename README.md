@@ -7,7 +7,7 @@ Payment SDK IOS
 
 
 ----------
-### Requirements 
+### Requerimientos
 
 *Version <= 1.4.x*
 - iOS 9.0 or Later
@@ -18,7 +18,7 @@ Payment SDK IOS
 - Xcode 10
 
 
-**Framework Dependencies:**
+**Dependencias:**
 
 Accelerate
 AudioToolbox
@@ -42,28 +42,28 @@ CommonCrypto (Just for version 1.4)
 
 
 ----------
-# INSTALLATION
+# INSTALACIÓN
 
 **Carthage**
 
-If you haven't already, install the latest version of [Carthage](https://github.com/Carthage/Carthage)
+Si no tienes instalado, Instala la última versión de [Carthage](https://github.com/Carthage/Carthage)
 
-Add this to the Cartfile:
+Agrega esta línea en Cartfile:
 
 ``` git "https://github.com/afirme-shieldgate/afirme-shieldgate-ios" ```
 
-For Beta Versions:
+Beta Version:
 
 ``` git "https://github.com/afirme-shieldgate/afirme-shieldgate-ios" "master" ```
 
 
-**ObjC configuration**
+**ObjC configuración**
 
 Set ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 
 In Build Phases -> Embed Frameworks Uncheck "Copy Only When Installing"
 
-# **Manual Installation(Recommended)**
+# **Instalación manual(Recomendad)**
 
 
 
@@ -73,38 +73,38 @@ In Build Phases -> Embed Frameworks Uncheck "Copy Only When Installing"
 
 
 
-SDK is a dynamic framework ([More Info](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html)) so you have to build each version for the desire target (simulator and device). To make the integration easy, you can follow these instructions in order to have just one Universal .framework file.
+Este SDK es un framework dinámico ([Información](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html)). Debes genera una versión para el target deseado (simulator and device). Sigue estos pasos para crear una versión universal .framework file.
 
-1. Build the SDK and create .framework files
+1. Compila el SDK & crea .framework files
 
-This will create a /build folder where there are all the necesary .framework (simulator, iphoneos and universal)
+Esto crearña un folder /build donde estarán los archivos .framework necesarios (simulator, iphoneos & universal)
  
-- With Target PaymentSDK selected, build the project for any iOS Simulator.
-- With Target PaymentSDK selected, build the project for a physical device.
+- Con el Target PaymentSDK seleccionado, compila el proyecto para cualquier simulador iOS.
+- Con el Target PaymentSDK seleccionado, compila el proyecto para Any iOS device
 
 After
 
-- With the Target PaymentSDK-Universal,  build the project for any iOS device. 
-- Inside the group Products -> PaymentSDK.framework -> Show in finder
-- Inside the the directory of PaymentSDK.framework, CMD+up
-- You can see three groups, inside the group Release-iosuniversal, you'll find the PaymentSDK.framework
+- Cont el Target PaymentSDK-Universal,  compila el proyecto en any iOS device. 
+- Ingresa a la carpeta Products -> PaymentSDK.framework -> Show in finder
+- Ingresa al directorio de PaymentSDK.framework, CMD+up
+- Se visualizarán 3 grupos, dentro del grupo Release-iosuniversal, estará el PaymentSDK.framework
 
-- Or if you prefer you can download pre-compilled .framework files from [Releases](https://github.com/afirme-shieldgate/afirme-shieldgate-ios)
+- O si prefieres puedes descargar un compilado .framework desde [Releases](https://github.com/afirme-shieldgate/afirme-shieldgate-ios)
 
 
-2. Drag the PaymentSDK.framework To your project and check "Copy Files if needed".
+2. Arrastra el PaymentSDK.framework a tu proyecto check "Copy Files if needed".
 
-In Target->General : Add PaymentSDK.framework to Frameworks, Libraries, and Embedded Content
+En Target->General : Agrega PaymentSDK.framework a Frameworks, Libraries, and Embedded Content
 
-In Target->Build Settings : Validate Workspace should be YES
+En Target->Build Settings : Validate Workspace debe ser YES
 
-3. Update the Build Settings with
+3. Actualiza el Build Settings with
 
 Set ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 
-In Build Phases -> Embed Frameworks Uncheck "Copy Only When Installing"
+En Build Phases -> Embed Frameworks Uncheck "Copy Only When Installing"
 
-4. If you use the Universal version and you want to upload to the appstore. Add Run Script Phase: Target->Build Phases -> + ->New Run Script Phase. And paste the following. Make sure that this build phase is added after Embed Frameworks phase.
+4. Si usas la versión Universal y quieres subir a la appstore. Agrega Run Script Phase: Target->Build Phases -> + ->New Run Script Phase. Agrega lo siguiente.Asegurate que el build phase esta agregado después Embed Frameworks phase.
 ```
 bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/PaymentSDK.framework/install_dynamic.sh"
 ```
@@ -116,29 +116,28 @@ Importing Swift
 
 import PaymentSDK
 
-Setting up your app inside AppDelegate->didFinishLaunchingWithOptions. You should use the Payment Client Credentials (Just ADD enabled)
+Configura tu app inside AppDelegate->didFinishLaunchingWithOptions. Debes usar el Payment Client Credentials (Just ADD enabled)
 
 PaymentSDKClient.setEnvironment("AbiColApp", secretKey: "2PmoFfjZJzjKTnuSYCFySMfHlOIBz7", testMode: true)
 
 
 # Types of implementation
 
-There are 3 ways to present the Add Card Form:
+Hay tres formas de presentar el Add Card Form:
 
-1. As a Widget in a Custom View
-2. As a Viewcontroller Pushed to your UINavigationController
-3. As a ViewController  presented in Modal
+1. Como un Widget en un Custom View
+2. Como un Viewcontroller Pushed a tu UINavigationController
+3. Como un ViewController  presentado en Modal
 
-The AddCard Form includes: Card io scan, and card validation.
+El AddCard Form incluye: Card io scan, y validación de tarjeta.
 
 ## Show AddCard Widget
 
-In order to create a widget you should create a PaymentAddNativeController from the PaymentSDKClient. Then add it to the UIView that will be the container of the Payment Form. The min height should be 300 px, and whole screen as width (270px without payment logo)
+Para crear un widget, debe crear un PaymentAddNativeController desde PaymentSDKClient. Luego agréguelo a la UIView que será el contenedor del Formulario de Pago. La altura mínima debe ser de 300 px y la pantalla completa como ancho (270 px sin el logotipo de pago)
 
-**Note:**  *When you are using the Payment Form as Widget. The Client custom ViewController will be responsible for the layout and synchronization (aka Spinner or loading)*
+**Note:**  *Cuando está utilizando el Formulario de Pago como Widget. El ViewController personalizado del Cliente será responsable del diseño y la sincronización (también conocido como Spinner o loader).)*
 
-The widget can scan with your phones camera the credit card data using card.io.
-
+El widget puede escanear con la cámara de su teléfono los datos de la tarjeta de crédito usando card.io.
 
 ```swift
 let paymentAddVC = self.addPaymentWidget(toView: self.addView, delegate: nil, uid:UserModel.uid, email:UserModel.email)
@@ -153,7 +152,7 @@ Objc
 [self addPaymentWidgetToView:self. addView delegate:self uid:@"myuid" email:@"myemail"];
 
 ```
-Retrive the valid credit card from the PaymentAddNativeController (Widget):
+Recupere la tarjeta de crédito válida de PaymentAddNativeController (Widget):
 
 ```swift
 if let validCard = paymentAddVC.getValidCard() // CHECK IF THE CARD IS VALID, IF THERE IS A VALIDATION ERROR NIL VALUE WILL BE RETURNED
@@ -224,7 +223,7 @@ Objc
 
 ###  PaymentCardAddedDelegate Protocol
 
-If you present the Form as a viewcontroller (push and modal)  you must implement the PaymetnezCardAddedDelegate Protocol in order to handle the states or actions inside the Viewcontroller. If you are using Widget implementation you can handle the actions as described above.
+Si presenta el formulario como un controlador de vista (push y modal), debe implementar el protocolo PaymetnezCardAddedDelegate para manejar los estados o acciones dentro del controlador de vista. Si está utilizando la implementación de Widget, puede manejar las acciones como se describe anteriormente.
 
 ```swift
 protocol PaymentCardAddedDelegate
@@ -239,7 +238,7 @@ func viewClosed()
 
 
 ### Scan Card
-If you want to do the scan yourself, using card.io
+Si quieres hacer el escaneo tú mismo, usa card.io
 
 ```swift
 PaymentSDKClient.scanCard(self) { (closed, number, expiry, cvv, card) in
@@ -269,13 +268,13 @@ if (card != nil) // Handle card
 
 ### Add Card (Only PCI Integrations)
 
-For custom form integrations
-Fields required
-+ cardNumber: card number as a string without any separators, e.g. 4111111111111111.
-+ cardHolder: cardholder name.
-+ expuryMonth: integer representing the card's expiration month, 01-12.
-+ expiryYear: integer representing the card's expiration year, e.g. 2020.
-+ cvc: card security code as a string, e.g. '123'.
+Para integraciones de formularios personalizados
+Campos obligatorios
++ cardNumber: número de tarjeta como una cadena sin separadores, p. 4111111111111111.
++ titular de la tarjeta: nombre del titular de la tarjeta.
++ expuryMonth: número entero que representa el mes de vencimiento de la tarjeta, 01-12.
++ expirationYear: número entero que representa el año de vencimiento de la tarjeta, p. 2020.
++ cvc: código de seguridad de la tarjeta en forma de cadena, p. '123'.
 
 ```swift
 let card = PaymentCard.createCard(cardHolder:"Gustavo Sotelo", cardNumber:"4111111111111111", expiryMonth:10, expiryYear:2020, cvc:"123")
@@ -322,7 +321,7 @@ else  //handle the error
 
 ### Secure Session Id
 
-Debit actions should be implemented in your own backend. For security reasons we provide a secure session id generation, for kount fraud systems. This will collect the device information in background
+Las acciones de débito deben implementarse en su propio backend. Por razones de seguridad, proporcionamos una generación de identificación de sesión segura, para sistemas de fraude de cuentas. Esto recopilará la información del dispositivo en segundo plano.
 
 ```swift
 let sessionId = PaymentSDKClient.getSecureSessionId()
@@ -378,24 +377,26 @@ paymentAddVC.baseFont = UIFont(name: "Your Font", size: 12) ?? UIFont.systemFont
 
 ```
 
-The customizable elements of the form are the following:
+Los elementos personalizables del formulario son los siguientes:
 
-- `baseFontColor` : The color of the font of the fields
-- `baseColor`: Color of the lines and titles of the fields
-- `backgroundColor`: Background color of the widget
-- `showLogo`: Enable or disable Payment Logo 
-- `baseFont`: Font of the entire form
-- `nameTitle`: String for the custom placeholder for the Name Field
-- `cardTitle`: String for the custom placeholder for the Card Field
-- `invalidCardTitle` String for the error message when a card number is invalid
+- `baseFontColor` : El color de la fuente de los campos
+- `baseColor`: Color de las líneas y títulos de los campos
+- `backgroundColor`: color de fondo del widget
+- `showLogo`: habilitar o deshabilitar el logotipo de pago
+- `baseFont`: Fuente de todo el formulario
+- `nameTitle`: cadena para el marcador de posición personalizado para el campo de nombre
+- `cardTitle`: cadena para el marcador de posición personalizado para el campo de la tarjeta
+- `invalidCardTitle` para el mensaje de error cuando un número de tarjeta no es válido
 
 
 ### Building and Running the PaymentSwift
 
 Before you can run the PaymentStore application, you need to provide it with your APP_CODE, APP_SECRET_KEY and a sample backend.
 
-1. If you haven't already and APP_CODE and APP_SECRET_KEY, please ask your contact on Payment Team for it.
-2. Replace the `PAYMENT_APP_CODE` and `PAYMENT_APP_SECRET_KEY` in your AppDelegate as shown in Usage section
-3.  Head to https://github.com/afirme-shieldgate/example-java-backend and click "Deploy to Heroku" (you may have to sign up for a Heroku account as part of this process). Provide your Paymentz Server Credentials APP_CODE and  APP_SECRET_KEY fields under 'Env'. Click "Deploy for Free".
-4. Replace the `BACKEND_URL` variable in the MyBackendLib.swift (inside the variable myBackendUrl) with the app URL Heroku provides you with (e.g. "https://my-example-app.herokuapp.com")
-5. Replace the variables (uid and email) in UserModel.swift  with your own user id reference
+Antes de poder ejecutar la aplicación PaymentStore, debe proporcionarle su APP_CODE, APP_SECRET_KEY y un backend de muestra.
+
+1. Si aún no lo ha hecho y APP_CODE y APP_SECRET_KEY, solicítelo a su contacto en el Equipo de pagos.
+2. Reemplace `PAYMENT_APP_CODE` y `PAYMENT_APP_SECRET_KEY` en su AppDelegate como se muestra en la sección Uso
+3. Diríjase a https://github.com/afirme-shieldgate/example-java-backend y haga clic en "Implementar en Heroku" (es posible que deba registrarse para obtener una cuenta de Heroku como parte de este proceso). Proporcione los campos APP_CODE y APP_SECRET_KEY de sus credenciales de servidor de Paymentz en 'Env'. Haga clic en "Implementar gratis".
+4. Reemplace la variable `BACKEND_URL` en MyBackendLib.swift (dentro de la variable myBackendUrl) con la URL de la aplicación que Heroku le proporciona (por ejemplo, "https://my-example-app.herokuapp.com")
+5. Reemplace las variables (uid y correo electrónico) en UserModel.swift con su propia referencia de identificación de usuario
