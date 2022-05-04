@@ -63,21 +63,13 @@ Set ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 
 In Build Phases -> Embed Frameworks Uncheck "Copy Only When Installing"
 
-# **Instalación manual(Recomendad)**
-
-
-
-
-
-
-
-
+# **Instalación manual(Recomendada)**
 
 Este SDK es un framework dinámico ([Información](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html)). Debes genera una versión para el target deseado (simulator and device). Sigue estos pasos para crear una versión universal .framework file.
 
 1. Compila el SDK & crea .framework files
 
-Esto crearña un folder /build donde estarán los archivos .framework necesarios (simulator, iphoneos & universal)
+Esto creara un folder /build donde estarán los archivos .framework necesarios (simulator, iphoneos & universal)
  
 - Con el Target PaymentSDK seleccionado, compila el proyecto para cualquier simulador iOS.
 - Con el Target PaymentSDK seleccionado, compila el proyecto para Any iOS device
@@ -110,7 +102,7 @@ bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/PaymentSDK.framework/insta
 ```
 
 ----------
-**Usage**
+**Uso**
 
 Importing Swift
 
@@ -121,7 +113,7 @@ Configura tu app inside AppDelegate->didFinishLaunchingWithOptions. Debes usar e
 PaymentSDKClient.setEnvironment("AbiColApp", secretKey: "2PmoFfjZJzjKTnuSYCFySMfHlOIBz7", testMode: true)
 
 
-# Types of implementation
+# Tipos de implementacion
 
 Hay tres formas de presentar el Add Card Form:
 
@@ -131,11 +123,11 @@ Hay tres formas de presentar el Add Card Form:
 
 El AddCard Form incluye: Card io scan, y validación de tarjeta.
 
-## Show AddCard Widget
+## Show AddCard Widget - Agregar Tarjeta
 
 Para crear un widget, debe crear un PaymentAddNativeController desde PaymentSDKClient. Luego agréguelo a la UIView que será el contenedor del Formulario de Pago. La altura mínima debe ser de 300 px y la pantalla completa como ancho (270 px sin el logotipo de pago)
 
-**Note:**  *Cuando está utilizando el Formulario de Pago como Widget. El ViewController personalizado del Cliente será responsable del diseño y la sincronización (también conocido como Spinner o loader).)*
+**Nota:**  *Cuando está utilizando el Formulario de Pago como Widget. El ViewController personalizado del Cliente será responsable del diseño y la sincronización (también conocido como Spinner o loader).)*
 
 El widget puede escanear con la cámara de su teléfono los datos de la tarjeta de crédito usando card.io.
 
@@ -390,8 +382,6 @@ Los elementos personalizables del formulario son los siguientes:
 
 
 ### Building and Running the PaymentSwift
-
-Before you can run the PaymentStore application, you need to provide it with your APP_CODE, APP_SECRET_KEY and a sample backend.
 
 Antes de poder ejecutar la aplicación PaymentStore, debe proporcionarle su APP_CODE, APP_SECRET_KEY y un backend de muestra.
 
