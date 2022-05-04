@@ -63,7 +63,8 @@ Set ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 
 In Build Phases -> Embed Frameworks Uncheck "Copy Only When Installing"
 
-# **Instalación manual(Recomendada)**
+# Instalación manual(Recomendada)
+
 
 Este SDK es un framework dinámico ([Información](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html)). Debes genera una versión para el target deseado (simulator and device). Sigue estos pasos para crear una versión universal .framework file.
 
@@ -73,15 +74,12 @@ Esto creara un folder /build donde estarán los archivos .framework necesarios (
  
 - Con el Target PaymentSDK seleccionado, compila el proyecto para cualquier simulador iOS.
 - Con el Target PaymentSDK seleccionado, compila el proyecto para Any iOS device
-
-After
-
 - Cont el Target PaymentSDK-Universal,  compila el proyecto en any iOS device. 
 - Ingresa a la carpeta Products -> PaymentSDK.framework -> Show in finder
 - Ingresa al directorio de PaymentSDK.framework, CMD+up
 - Se visualizarán 3 grupos, dentro del grupo Release-iosuniversal, estará el PaymentSDK.framework
 
-- O si prefieres puedes descargar un compilado .framework desde [Releases](https://github.com/afirme-shieldgate/afirme-shieldgate-ios)
+O si prefieres puedes descargar un compilado .framework desde [Releases](https://github.com/afirme-shieldgate/afirme-shieldgate-ios)
 
 
 2. Arrastra el PaymentSDK.framework a tu proyecto check "Copy Files if needed".
@@ -114,6 +112,7 @@ PaymentSDKClient.setEnvironment("AbiColApp", secretKey: "2PmoFfjZJzjKTnuSYCFySMf
 
 
 # Tipos de implementacion
+
 
 Hay tres formas de presentar el Add Card Form:
 
